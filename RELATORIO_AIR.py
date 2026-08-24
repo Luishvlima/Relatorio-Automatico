@@ -123,7 +123,7 @@ def baixar_prazo_de_reparos() -> str:
 # MAIN
 # =============================================================================
 
-def main_relatorio1(log, pasta_data_arquivo_bruto, nome_arquivo, token_air):
+def main_AIR(log, pasta_data_arquivo_bruto, nome_arquivo, token_air):
 
     #======================Configurações globais para a função======================
     global  LOG, PASTA_DATA_ARQUIVO_BRUTO, TOKEN_AIR, FILENAME_PRAZO_REPAROS

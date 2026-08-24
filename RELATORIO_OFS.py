@@ -249,7 +249,7 @@ def baixar_csv(unidade_id, pasta_saida=".", tentativas=5):
 #======================================================
 # MAIN
 #======================================================
-def main_relatorio2(log, cookies_file, pasta_edge_profile, pasta_data_arquivo_bruto, nome_arquivo, microsoft_password, oracle_password, email):
+def main_OFS(log, cookies_file, pasta_edge_profile, pasta_data_arquivo_bruto, nome_arquivo, microsoft_password, oracle_password, email):
 
 	global  LOG, COOKIES_FILE, PASTA_EDGE_PROFILE, PASTA_DATA_ARQUIVO_BRUTO, EMAIL, ORACLE_PASSWORD, MICROSOFT_PASSWORD, FILENAME_PADRAO
 	PASTA_DATA_ARQUIVO_BRUTO = pasta_data_arquivo_bruto
