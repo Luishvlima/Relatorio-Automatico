@@ -1,36 +1,36 @@
-# Automacao de Relatorios IRR/IFI
+# Automação de Relatórios IRR/IFI
 
 ## Contexto pessoal e profissional
 
-Este foi meu primeiro projeto de programacao. Comecei a desenvolve-lo como um projeto pessoal para facilitar demandas recorrentes do meu trabalho, enquanto ainda atuava na area administrativa como jovem aprendiz. Ao longo do tempo, fui aperfeicoando a estrutura, corrigindo falhas, adicionando novos recursos e aprimorando a confiabilidade da automacao.
+Este foi meu primeiro projeto de programação. Comecei a desenvolvê-lo como um projeto pessoal para facilitar demandas recorrentes do meu trabalho, enquanto ainda atuava na área administrativa como jovem aprendiz. Ao longo do tempo, fui aperfeiçoando a estrutura, corrigindo falhas, adicionando novos recursos e aprimorando a confiabilidade da automação.
 
-O projeto teve um papel importante na minha transicao da area de jovem aprendiz administrativo para a area de jovem aprendiz de programacao. Ele foi uma oportunidade pratica para aplicar Python na resolucao de um problema real, entender um fluxo de desenvolvimento de ponta a ponta e demonstrar que eu poderia contribuir tecnicamente com a equipe.
+O projeto teve um papel importante na minha transição da área de jovem aprendiz administrativo para a área de jovem aprendiz de programação. Ele foi uma oportunidade prática para aplicar Python na resolução de um problema real, entender um fluxo de desenvolvimento de ponta a ponta e demonstrar que eu poderia contribuir tecnicamente com a equipe.
 
-Depois deste projeto, desenvolvi diversas outras automacoes para apoiar processos da empresa. Essas solucoes posteriores nao estao sendo apresentadas porque pertencem a empresa e podem conter informacoes, regras de negocio e integracoes proprietarias. Essa limitacao e intencional e faz parte do compromisso de preservar a confidencialidade dos dados e ativos aos quais tive acesso profissionalmente.
+Depois deste projeto, desenvolvi diversas outras automações para apoiar processos da empresa. Essas soluções posteriores não estão sendo apresentadas porque pertencem à empresa e podem conter informações, regras de negócio e integrações proprietárias. Essa limitação é intencional e faz parte do compromisso de preservar a confidencialidade dos dados e ativos aos quais tive acesso profissionalmente.
 
-## Visao geral
+## Visão geral
 
-Este projeto foi desenvolvido como uma iniciativa pessoal para facilitar e automatizar demandas recorrentes do meu trabalho. O sistema consolida dados operacionais, gera relatorios de acompanhamento, cria dashboards visuais e distribui os resultados automaticamente.
+Este projeto foi desenvolvido como uma iniciativa pessoal para facilitar e automatizar demandas recorrentes do meu trabalho. O sistema consolida dados operacionais, gera relatórios de acompanhamento, cria dashboards visuais e distribui os resultados automaticamente.
 
-A proposta principal foi reduzir tarefas manuais, diminuir a possibilidade de erros de consolidacao e tornar o acompanhamento dos indicadores mais rapido e padronizado.
+A proposta principal foi reduzir tarefas manuais, diminuir a possibilidade de erros de consolidação e tornar o acompanhamento dos indicadores mais rápido e padronizado.
 
 ## O que o sistema faz
 
-- Agenda execucoes automaticas em horarios configuraveis.
-- Baixa relatorios de diferentes fontes de dados.
-- Reutiliza cookies de sessao quando disponiveis e solicita nova autenticacao quando necessario.
+- Agenda execuções automáticas em horários configuráveis.
+- Baixa relatórios de diferentes fontes de dados.
+- Reutiliza cookies de sessão quando disponíveis e solicita nova autenticação quando necessário.
 - Processa e padroniza dados tabulares com Python e pandas.
-- Classifica atividades e status conforme regras de negocio.
+- Classifica atividades e status conforme regras de negócio.
 - Calcula indicadores relacionados a IRR e IFI.
 - Gera planilhas tratadas para consulta.
 - Cria dashboards em formato de imagem.
-- Envia os dashboards por Telegram para os destinatarios configurados.
-- Organiza automaticamente arquivos brutos, arquivos tratados, imagens, configuracoes e logs.
-- Possui uma etapa opcional de configuracao de exclusoes do Windows Defender para evitar interferencias na automacao local.
+- Envia os dashboards por Telegram para os destinatários configurados.
+- Organiza automaticamente arquivos brutos, arquivos tratados, imagens, configurações e logs.
+- Possui uma etapa opcional de configuração de exclusões do Windows Defender para evitar interferências na automação local.
 
 ## Arquitetura
 
-O projeto foi dividido por responsabilidade, mantendo o fluxo principal pequeno e facilitando a manutencao:
+O projeto foi dividido por responsabilidade, mantendo o fluxo principal pequeno e facilitando a manutenção:
 
 - `Relatorio_IRR-IFI - Repor.py`: ponto de entrada e orquestracao do processo.
 - `RELATORIO_AIR.py`: comunicacao com a fonte de dados AIR.
@@ -45,9 +45,9 @@ O projeto foi dividido por responsabilidade, mantendo o fluxo principal pequeno 
 - `EXCLUSAO_DEFENDER.py`: configuracao opcional do ambiente Windows.
 - `Transformado .exe.bat`: instalacao das dependencias e geracao do executavel com PyInstaller.
 
-Na versao compartilhada, alguns nomes de arquivos foram generalizados para reduzir a exposicao de referencias internas. Os nomes acima correspondem a estrutura original e sao usados aqui apenas para explicar a organizacao e a responsabilidade de cada componente.
+Na versão compartilhada, alguns nomes de arquivos foram generalizados para reduzir a exposição de referências internas. Os nomes acima correspondem à estrutura original e são usados aqui apenas para explicar a organização e a responsabilidade de cada componente.
 
-Essa separacao permite alterar uma fonte de dados, uma regra de negocio ou o formato do dashboard sem concentrar toda a logica em um unico arquivo.
+Essa separação permite alterar uma fonte de dados, uma regra de negócio ou o formato do dashboard sem concentrar toda a lógica em um único arquivo.
 
 ## Tecnologias utilizadas
 
@@ -61,44 +61,44 @@ Essa separacao permite alterar uma fonte de dados, uma regra de negocio ou o for
 - PyInstaller
 - Windows PowerShell
 
-## Qualidade e decisoes tecnicas
+## Qualidade e decisões técnicas
 
-### Separacao de responsabilidades
+### Separação de responsabilidades
 
-Cada modulo possui uma funcao clara. O arquivo principal coordena o fluxo, enquanto os demais componentes executam tarefas especificas. Isso facilita a leitura, a localizacao de falhas e futuras extensoes.
+Cada módulo possui uma função clara. O arquivo principal coordena o fluxo, enquanto os demais componentes executam tarefas específicas. Isso facilita a leitura, a localização de falhas e futuras extensões.
 
 ### Tratamento de erros
 
-As operacoes de rede possuem timeout, novas tentativas e mensagens de log. O sistema tambem trata respostas vazias, sessoes expiradas, respostas HTML inesperadas e falhas na leitura de arquivos.
+As operações de rede possuem timeout, novas tentativas e mensagens de log. O sistema também trata respostas vazias, sessões expiradas, respostas HTML inesperadas e falhas na leitura de arquivos.
 
-### Padronizacao de dados
+### Padronização de dados
 
-Os dados recebidos podem ter acentos, espacos, formatos de data diferentes e valores ausentes. Por isso, o processamento inclui normalizacao de nomes de colunas, limpeza de texto, conversao de datas e tratamento de valores nulos antes dos calculos.
+Os dados recebidos podem ter acentos, espaços, formatos de data diferentes e valores ausentes. Por isso, o processamento inclui normalização de nomes de colunas, limpeza de texto, conversão de datas e tratamento de valores nulos antes dos cálculos.
 
 ### Rastreabilidade
 
-O sistema registra as principais etapas da execucao, incluindo inicio, tentativas de download, processamento, salvamento dos arquivos e falhas. Essa rastreabilidade ajuda a investigar problemas e acompanhar o resultado de cada execucao.
+O sistema registra as principais etapas da execução, incluindo início, tentativas de download, processamento, salvamento dos arquivos e falhas. Essa rastreabilidade ajuda a investigar problemas e acompanhar o resultado de cada execução.
 
 ### Configurabilidade
 
-Credenciais, tokens, identificadores de unidades, horarios e endpoints sao recebidos por configuracao, permitindo adaptar o sistema sem alterar a logica de processamento. Na versao entregue para avaliacao, esses valores foram removidos ou substituidos por placeholders.
+Credenciais, tokens, identificadores de unidades, horários e endpoints são recebidos por configuração, permitindo adaptar o sistema sem alterar a lógica de processamento. Na versão entregue para avaliação, esses valores foram removidos ou substituídos por placeholders.
 
-### Distribuicao
+### Distribuição
 
-O projeto possui um script de build para gerar um executavel com PyInstaller, simplificando a execucao em um computador Windows sem exigir que o usuario final conheca todos os detalhes da estrutura Python.
+O projeto possui um script de build para gerar um executável com PyInstaller, simplificando a execução em um computador Windows sem exigir que o usuário final conheça todos os detalhes da estrutura Python.
 
-## Seguranca e confidencialidade
+## Segurança e confidencialidade
 
-Este foi um projeto pessoal desenvolvido para apoiar atividades profissionais. Portanto, a versao original continha credenciais, tokens, identificadores, endpoints e referencias a informacoes internas da empresa onde o projeto era utilizado.
+Este foi um projeto pessoal desenvolvido para apoiar atividades profissionais. Portanto, a versão original continha credenciais, tokens, identificadores, endpoints e referências a informações internas da empresa onde o projeto era utilizado.
 
-Por responsabilidade profissional e respeito a confidencialidade, removi da versao compartilhada:
+Por responsabilidade profissional e respeito à confidencialidade, removi da versão compartilhada:
 
-- senhas de autenticacao;
+- senhas de autenticação;
 - tokens de APIs e do bot do Telegram;
 - identificadores de chat;
 - e-mail utilizado no login;
 - endpoints e URLs internas das fontes de dados;
-- identificadores de unidades e configuracoes especificas da operacao;
+- identificadores de unidades e configurações específicas da operação;
 - arquivos de cookies e perfis autenticados do navegador;
 - planilhas, imagens, logs e quaisquer dados reais da empresa.
 
