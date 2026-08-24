@@ -4,8 +4,8 @@ import warnings
 from datetime import datetime
 
 #======================IMPORTS DAS FUNÇÕES DE CADA RELATÓRIO=====================
-from RELATORIO_OFS import main_OFS
-from RELATORIO_AIR import main_AIR
+from RELATORIO_2 import main_relatorio2
+from RELATORIO_1 import main_relatorio1
 from CARREGAR_DADOS import carregar_dados
 from CRIACAO_DASHBOARD import criacao_dashboard
 from LOG import configurar_logger
@@ -125,10 +125,10 @@ def main():
     try:
         #==================EXECUTA O DOWNLOAD DO RELATÓRIO AIR ÀS 04:00===================
         if agora == "04:00":
-            main_AIR(LOG, PASTA_DATA_ARQUIVO_BRUTO, NOME_AIR, TOKEN_AIR)
+            main_relatorio1(log=LOG, pasta_data_arquivo_bruto=PASTA_DATA_ARQUIVO_BRUTO, nome_arquivo=NOME_AIR, token_air=TOKEN_AIR)
         #=============EXECUTA O DOWNLOAD APENAS DO RELATÓRIO OFS NOS DEMAIS HORÁRIOS============
         else:    
-            main_OFS(log=LOG, 
+            main_relatorio2(log=LOG, 
                      cookies_file=COOKIE_FILE, 
                      pasta_edge_profile=PASTA_EDGE, 
                      pasta_data_arquivo_bruto=PASTA_DATA_ARQUIVO_BRUTO, 

@@ -276,7 +276,7 @@ def criacao_dashboard(log, PASTA_DATA_IMAGENS_TRATADO, dicionarios):
         #=================SALVAMENTO DA IMAGEM DO CARD_CLUSTER=================
         fig.savefig(caminho_imagem_cluster,format="jpeg",dpi=RESOLUCAO_DPI,facecolor=FUNDO,bbox_inches="tight",)
         plt.close(fig)
-        LOG.info(f"DASHBOARD_IRR-ING_CLUSTERS.jpeg salvo. ")
+        LOG.info(f"DASHBOARD_relatorio_final_CLUSTERS.jpeg salvo. ")
         LINKS.append(caminho_imagem_cluster)
 
         #==========================CRIAÇÃO DE CHAMADOS==========================
