@@ -102,24 +102,24 @@ Por responsabilidade profissional e respeito à confidencialidade, removi da ver
 - arquivos de cookies e perfis autenticados do navegador;
 - planilhas, imagens, logs e quaisquer dados reais da empresa.
 
-Os campos sensiveis foram deixados vazios ou substituidos por `<REMOVIDO POR SEGURANCA>`. Essa anonimizacao reduz o risco de exposicao acidental e deixa claro quais configuracoes precisam ser fornecidas pelo ambiente autorizado para que o sistema seja executado.
+Os campos sensíveis foram deixados vazios ou substituídos por `<REMOVIDO POR SEGURANÇA>`. Essa anonimização reduz o risco de exposição acidental e deixa claro quais configurações precisam ser fornecidas pelo ambiente autorizado para que o sistema seja executado.
 
-Uma evolucao recomendada seria retirar completamente os segredos do codigo e utilizar variaveis de ambiente, um gerenciador de segredos ou o Windows Credential Manager. Tambem seria adequado aplicar controle de acesso aos arquivos de cookies, logs e relatorios gerados.
+Uma evolução recomendada seria retirar completamente os segredos do código e utilizar variáveis de ambiente, um gerenciador de segredos ou o Windows Credential Manager. Também seria adequado aplicar controle de acesso aos arquivos de cookies, logs e relatórios gerados.
 
 ## Aprendizados
 
-O desenvolvimento envolveu problemas praticos de integracao entre APIs, planilhas, navegador, autenticacao multifator, agendamento e distribuicao de resultados. Alem da implementacao, foi necessario pensar em resiliencia, observabilidade, organizacao de arquivos e protecao de informacoes confidenciais.
+O desenvolvimento envolveu problemas práticos de integração entre APIs, planilhas, navegador, autenticação multifator, agendamento e distribuição de resultados. Além da implementação, foi necessário pensar em resiliência, observabilidade, organização de arquivos e proteção de informações confidenciais.
 
 Esse projeto fortaleceu minha capacidade de:
 
-- decompor um processo manual em etapas automatizaveis;
-- identificar e separar responsabilidades no codigo;
-- lidar com falhas de rede e sessoes expiradas;
-- transformar dados inconsistentes em informacao utilizavel;
-- criar uma saida visual orientada a acompanhamento operacional;
-- documentar limites e riscos de uma solucao;
+- decompor um processo manual em etapas automatizáveis;
+- identificar e separar responsabilidades no código;
+- lidar com falhas de rede e sessões expiradas;
+- transformar dados inconsistentes em informação utilizável;
+- criar uma saída visual orientada a acompanhamento operacional;
+- documentar limites e riscos de uma solução;
 - proteger dados internos ao apresentar um projeto em contexto externo.
 
-## Consideracoes finais
+## Considerações finais
 
-Este repositorio representa a estrutura e as decisoes tecnicas de uma automacao real, mas nao inclui os dados nem as configuracoes proprietarias necessarias para acessar os sistemas originais. A remocao dessas informacoes foi intencional: demonstra que a qualidade de uma solucao inclui nao apenas fazer o processo funcionar, mas tambem preservar a seguranca, a privacidade e os limites de uso dos dados envolvidos.
+Este repositório representa a estrutura e as decisões técnicas de uma automação real, mas não inclui os dados nem as configurações proprietárias necessárias para acessar os sistemas originais. A remoção dessas informações foi intencional: demonstra que a qualidade de uma solução inclui não apenas fazer o processo funcionar, mas também preservar a segurança, a privacidade e os limites de uso dos dados envolvidos.
